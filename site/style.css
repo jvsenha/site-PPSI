@@ -30,12 +30,46 @@ h3 {
 }
 
 
-main {
+.tlt-contato {
+    width: 80%;
     display: flex;
-    flex: wrap;
+    margin: 2em 0;
     flex-direction: column;
+    align-items: flex-start;
 }
 
+
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.MainContato{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 2em 0;
+}
+
+.inputSec{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.inputMap{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
 header {
     display: flex;
     flex: wrap;
@@ -67,8 +101,8 @@ nav {
 
 
 
-.titulo{
-  
+.titulo {
+
     font-size: 3em;
     font-family: 'Tilt Neon', sans-serif;
     font-weight: 100;
@@ -93,16 +127,25 @@ nav li {
     font-size: 20px;
     font-weight: 500;
 }
-.feed{
-    width: 100%;
+
+.feed {
+    width: 29%;
     display: flex;
     flex-direction: column;
 }
-li a{
- user-select: none;
- text-decoration: none;
- color: black;
+
+.post {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
 }
+
+li a {
+    user-select: none;
+    text-decoration: none;
+    color: black;
+}
+
 a:hover {
     transition: 0.3S;
     color: #ffffff;
@@ -202,6 +245,85 @@ p {
     outline-offset: -5px;
 }
 
+
+.card-post {
+    position: relative;
+    background-color: #ffffff;
+    padding: 1em;
+    z-index: 5;
+    border-radius: 10px;
+    max-width: 50em;
+    transition: 200ms ease-in-out;
+    margin-bottom: 1em;
+    border: 1px solid #4a5568;
+}
+
+.username {
+    color: #f56c2c;
+    font-size: 0.85em;
+    font-weight: 600;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+}
+
+.body .text {
+    margin: 0 10px 0 0;
+    white-space: pre-line;
+    color: #000000;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 4px;
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    color: #9fa4aa;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    margin-top: 10px;
+}
+
+.footer div {
+    margin-right: 1rem;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.footer svg {
+    margin-right: 5px;
+    height: 100%;
+    stroke: #9fa4aa;
+}
+
+.viewer span {
+    height: 20px;
+    width: 20px;
+    background-color: rgb(245 108 44);
+    margin-right: -6px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 8px;
+    color: #fff;
+    padding: 2px;
+}
+
+.viewer span svg {
+    stroke: #fff;
+}
+
 .feedback-form {
     background-color: #ffffff;
     border: 1px solid #4a5568;
@@ -211,9 +333,9 @@ p {
     border-radius: 0.75rem;
     padding: 0.5rem;
     font-size: 0.875rem;
-    width: 45%;
-    margin: 3em;
+    width: 97.5%;
 }
+
 .title {
     text-align: center;
     color: #718096;
@@ -222,6 +344,7 @@ p {
     grid-column: span 6;
     color: #000000;
 }
+
 .feedback-input {
     background-color: #ededed;
     color: #000000;
@@ -234,6 +357,7 @@ p {
     transition-duration: 0.3s;
     outline: none;
 }
+
 .btn {
     fill: #d2d6dc;
     grid-column: span 1;
@@ -246,16 +370,20 @@ p {
     background-color: #ffffff;
     border: 1px solid #f56c2c;
 }
+
 .btn:hover {
     border-color: #d2d6dc;
 }
+
 .btn:focus {
     fill: #90cdf4;
     background-color: #4299e1;
 }
+
 .spacer {
     grid-column: span 2;
 }
+
 .send {
     stroke: #d2d6dc;
     background-color: #f56c2c;
@@ -268,14 +396,108 @@ p {
     padding: 0.5rem;
     transition-duration: 0.3s;
 }
+
 .send:hover {
     border-color: #d2d6dc;
 }
+
 .send:focus {
     stroke: #90cdf4;
     background-color: #4299e1;
 }
 
+.inputGroup {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 1em 0 1em 0;
+    max-width: 85%;
+    position: relative;
+}
+  
+  .inputGroup input,
+  .inputGroup textarea {
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border: 2px solid rgb(200, 200, 200);
+    background-color: transparent;
+    border-radius: 20px;
+    width: 100%;
+  }
+  
+  /* Restante do seu código CSS permanece inalterado */
+  
+  
+  .inputGroup :is(input:focus, input:valid),
+  .inputGroup :is(textarea:focus, textarea:valid) {
+    border-color: #F56C2C;
+  }
+  
+  .inputGroup label {
+    font-size: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.8em;
+    margin-left: 0.5em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: rgb(100, 100, 100);
+  }
+  
+  .inputGroup :is(input:focus, input:valid)~label,
+  .inputGroup :is(textarea:focus, textarea:valid)~label {
+    transform: translateY(-50%) scale(.9);
+    margin: 0em;
+    margin-left: 1.3em;
+    padding: 0.4em;
+    background-color: #ffffff;
+  }
+
+
+
+  .Enviar {
+    appearance: none;
+    background-color: transparent;
+    border: 0.125em solid #1A1A1A;
+    border-radius: 0.9375em;
+    box-sizing: border-box;
+    color: #3B3B3B;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 3.75em;
+    width: 88%;
+    min-width: 0;
+    outline: none;
+    padding: 1em 2.3em;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+   }
+   
+   .Enviar:disabled {
+    pointer-events: none;
+   }
+   
+   .Enviar:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+   }
+   
+   .Enviar:active {
+    box-shadow: none;
+    transform: translateY(0);
+   }
 @media (any-hover: hover) and (any-pointer: fine) {
     .card__content {
         transform: translateY(62%);
@@ -481,15 +703,68 @@ footer span {
     flex-direction: row;
 }
 
-@media all and (max-width: 725px) {
+@media all and (max-width: 775px) {
+    .tlt-contato {
+        width: 100%;
+        display: flex;
+        margin: 2em 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Enviar {
+        width: 100%;
+    }
+    .inputGroup {
+        font-family: 'Segoe UI', sans-serif;
+        margin: 1em 0 1em 0;
+        max-width: 95%;
+        position: relative;
+    }
+    .inputSec {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: initial;
+        align-items: initial;
+        margin-bottom: 2em;
+    }
+    .inputMap{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
     nav {
         display: flex;
-        width: 100%;
+        width: 96%;
         background-color: #F56C2C;
         align-items: center;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-around;
+        flex-direction: row;
     }
+
+    .menu {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        background: transparent;
+        border: 0;
+    }
+
+    .hamburger svg {
+        font-size: larger;
+    }
+}
+
+@media all and (max-width: 725px) {
+
 
     nav h1 {
         position: sticky;
@@ -567,21 +842,26 @@ footer span {
     }
 
     .feedback-form {
-    width: 95%;
+        width: 96%;
     }
-    .feed{
-        align-items: center;
-    }
+
 }
-@media (max-width: 600px) {
-    .menu {
+
+@media all and (max-width: 455px) {
+    .viewer span {
         display: none;
     }
-    .hamburger {
-        display: block;
+
+    .feed {
+        width: 96%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 1em 0;
     }
-    nav{
-        justify-content: space-around;
-        flex-direction: row;
+
+    .post {
+        width: 94%;
+        display: flex;
+        flex-direction: column;
     }
 }
